@@ -8,12 +8,18 @@
     "website": "https://github.com/openspp/openspp-program",
     "license": "LGPL-3",
     "depends": [
+        "base",
         "spp_api",
         "spp_service_points",
+        "spp_area",
+        "g2p_registry_base",
+        "g2p_registry_individual",
+        "g2p_registry_group",
     ],
     "data": [
         "data/spp_api_namespace_data.xml",
         "data/spp_api_path_data.xml",
+        "data/spp_api_field_data.xml",
         "views/spp_service_point_views.xml",
     ],
     "application": False,
