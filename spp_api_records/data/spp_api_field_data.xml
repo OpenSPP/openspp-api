@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Individual -->
+    <record id="beneficary_individual_post_given_name_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="g2p_registry_individual.field_res_partner__given_name" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_individual_post_family_name_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="g2p_registry_individual.field_res_partner__family_name" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_individual_post_gender_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="g2p_registry_individual.field_res_partner__gender" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_individual_post_is_group_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="g2p_registry_base.field_res_partner__is_group" />
+        <field name="default_value" eval="False" />
+    </record>
+
+    <record id="beneficary_individual_post_is_registrant_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="g2p_registry_base.field_res_partner__is_registrant" />
+        <field name="default_value" eval="True" />
+    </record>
+
+    <record id="beneficary_individual_post_address_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="g2p_registry_base.field_res_partner__address" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_individual_post_zip_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="base.field_res_partner__zip" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_individual_post_city_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="base.field_res_partner__city" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_individual_post_area_id_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="spp_area.field_res_partner__area_id" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_individual_post_email_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_individual_post_path" />
+        <field name="field_id" ref="base.field_res_partner__email" />
+        <field name="required" eval="1" />
+    </record>
+
+
+    <!--Group -->
+    <record id="beneficary_group_post_given_name_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_group_post_path" />
+        <field name="field_id" ref="base.field_res_partner__name" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_group_post_is_group_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_group_post_path" />
+        <field name="field_id" ref="g2p_registry_base.field_res_partner__is_group" />
+        <field name="default_value" eval="True" />
+    </record>
+
+    <record id="beneficary_group_post_is_registrant_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_group_post_path" />
+        <field name="field_id" ref="g2p_registry_base.field_res_partner__is_registrant" />
+        <field name="default_value" eval="True" />
+    </record>
+
+    <record id="beneficary_group_post_address_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_group_post_path" />
+        <field name="field_id" ref="g2p_registry_base.field_res_partner__address" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_group_post_zip_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_group_post_path" />
+        <field name="field_id" ref="base.field_res_partner__zip" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_group_post_city_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_group_post_path" />
+        <field name="field_id" ref="base.field_res_partner__city" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_group_post_area_id_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_group_post_path" />
+        <field name="field_id" ref="spp_area.field_res_partner__area_id" />
+        <field name="required" eval="1" />
+    </record>
+
+    <record id="beneficary_group_post_email_api_field" model="spp_api.field">
+        <field name="path_id" ref="beneficiary_group_post_path" />
+        <field name="field_id" ref="base.field_res_partner__email" />
+        <field name="required" eval="1" />
+    </record>
+
+</odoo>

@@ -7,7 +7,9 @@
         <field name="namespace_id" ref="spp_api_namespace" />
         <field name="description">GET Service Points</field>
         <field name="method">get</field>
-        <field name="field_ids" eval="[(
+        <field
+            name="field_ids"
+            eval="[(
             6, 0, [
                 ref('spp_service_points.field_spp_service_point__area_id'),
                 ref('spp_service_points.field_spp_service_point__country_id'),
@@ -19,7 +21,24 @@
                 ref('spp_api_records.field_spp_service_point__company_id'),
                 ref('spp_api_records.field_spp_service_point__topup_service_point'),
             ]
-        )]" />
+        )]"
+        />
+    </record>
+
+    <record id="beneficiary_individual_post_path" model="spp_api.path">
+        <field name="name">Beneficiary Individual Post</field>
+        <field name="model_id" ref="base.model_res_partner" />
+        <field name="namespace_id" ref="spp_api_namespace" />
+        <field name="description">POST Beneficiary Individual</field>
+        <field name="method">post</field>
+    </record>
+
+    <record id="beneficiary_group_post_path" model="spp_api.path">
+        <field name="name">Beneficiary Group Post</field>
+        <field name="model_id" ref="base.model_res_partner" />
+        <field name="namespace_id" ref="spp_api_namespace" />
+        <field name="description">POST Beneficiary Group</field>
+        <field name="method">post</field>
     </record>
 
 </odoo>
