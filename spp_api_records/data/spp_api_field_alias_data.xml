@@ -73,4 +73,10 @@
         <field name="field_id" ref="g2p_programs.field_g2p_program__write_date" />
     </record>
 
+    <record id="service_point_write_date" model="spp_api.field.alias">
+        <field name="alias_name">last_updated</field>
+        <field name="api_path_id" ref="spp_api_records.service_point_path" />
+        <field name="field_id" ref="spp_service_points.field_spp_service_point__write_date" />
+    </record>
+
 </odoo>
