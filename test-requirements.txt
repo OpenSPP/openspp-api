@@ -7,3 +7,4 @@ git+https://github.com/openspp/openspp-odoo-external-dependencies@15.0#subdirect
 git+https://github.com/OpenG2P/openg2p-program@15.0-develop#subdirectory=setup/g2p_programs
 git+https://github.com/OpenSPP/openspp-registry@15.0#subdirectory=setup/spp_service_points
 git+https://github.com/OpenSPP/openspp-registry@15.0#subdirectory=setup/spp_area
+git+https://github.com/openspp/openspp-program@15.0#subdirectory=setup/g2p_entitlement_cash
