@@ -9,7 +9,9 @@ from odoo.osv.expression import AND
 from odoo.service.db import list_dbs
 from odoo.tools import date_utils
 
-from ..tools import constants, verify_and_decode_signature
+from odoo.addons.spp_oauth.tools import verify_and_decode_signature
+
+from ..tools import constants
 
 
 def setup_db(req, db_name):
@@ -72,7 +74,16 @@ class SppDciApiServer(Controller):
         req = request
 
         data = req.httprequest.data or "{}"
-        data = json.loads(data)
+        try:
+            data = json.loads(data)
+        except json.decoder.JSONDecodeError:
+            return response_wrapper(
+                400,
+                {
+                    "error": "Bad Request",
+                    "error_description": "data must be in JSON format.",
+                },
+            )
 
         client_id = data.get("client_id", "")
         client_secret = data.get("client_secret", "")
@@ -143,7 +154,10 @@ class SppDciApiServer(Controller):
         req = HttpRequest(req.httprequest)
 
         data = req.httprequest.data or "{}"
-        data = json.loads(data)
+        try:
+            data = json.loads(data)
+        except json.decoder.JSONDecodeError:
+            return error_wrapper(400, "data must be in JSON format.")
 
         header = data.get("header", "")
 
@@ -346,7 +360,7 @@ class SppDciApiServer(Controller):
                 domain.append(("is_group", "=", True))
 
             # Process Queries and modify domain
-            self.process_queries(query_type, queries, domain)
+            domain = self.process_queries(query_type, queries, domain)
 
             if domain:
                 records = request.env["res.partner"].sudo().search(domain)
